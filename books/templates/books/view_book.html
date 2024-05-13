@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ book.title }}</h1>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+
+        <h2>Comments:</h2>
+        {% for comment in comments %}
+            <div class="card mb-2">
+                <div class="card-body">
+                    {{ comment.text }}
+                    <p class="text-muted">Posted on {{ comment.created_date }}</p>
+                </div>
+            </div>
+        {% empty %}
+            <p>No comments yet.</p>
+        {% endfor %}
+
+        <a href="{% url 'add_comment' book.id %}" class="btn btn-primary">Add Comment</a>
+        <a href="{% url 'book_list' %}" class="btn btn-secondary">Back to Book List</a>
+    </div>
+</body>
+</html>
