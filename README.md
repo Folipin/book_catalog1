@@ -11,7 +11,7 @@ pip install -r requirements.txt
 1. **Клонирование репозитория**
 
    ```git
-   git clone cod https://github.com/Folipin/book-catalog.git
+   git clone cod https://github.com/Folipin/book_catalog1
    cd book-catalog
    pip install -r requirements.txt
 python manage.py migrate
