@@ -14,8 +14,8 @@ pip install -r requirements.txt
    git clone cod https://github.com/Folipin/book_catalog1
    cd book-catalog
    pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
-python manage.py createsuperuser
+   python manage.py migrate
+   python manage.py runserver
+   python manage.py createsuperuser
 
 
